@@ -61,6 +61,8 @@ where
         ) 
     };
 
+    operand1.to_coeff_representation();
+    operand2.to_coeff_representation();
     result.to_coeff_representation();    
     result
 }
@@ -72,8 +74,6 @@ pub fn naive_multiply<const MOD_Q: u64, const N: usize>(
 where
     [(); N / 2]:,
 {
-    operand1.to_coeff_representation();
-    operand2.to_coeff_representation();
     let mut result = CyclotomicRing::<MOD_Q, N>::new();
     for i in 0..N {
         for j in 0..N {
