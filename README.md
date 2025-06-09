@@ -1,7 +1,7 @@
 # Ring Arithmetic Library
 
 ## Overview
-The Ring Arithmetic Library is a high-performance library for performing arithmetic operations within mathematical rings. It is designed for use in cryptographic applications, modular arithmetic, and abstract algebra. The library leverages Intel's HEXL for optimized modular arithmetic operations.
+The Ring Arithmetic Library is a high-performance library for performing arithmetic operations within mathematical rings. It is designed for use in cryptographic applications, modular arithmetic, and abstract algebra. The library leverages Intel's HEXL for optimised modular arithmetic operations.
 
 ## Features
 - **Efficient Modular Arithmetic**: Addition, subtraction, multiplication, and modular reduction.
