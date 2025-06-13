@@ -4,15 +4,11 @@ use rand::Rng;
 
 #[derive(Clone, Debug)]
 pub struct CyclotomicRing<const MOD_Q: u64, const N: usize>
-where
-    [(); N / 2]:,
 {
     pub data: [u64; N],
 }
 
 impl<const MOD_Q: u64, const N: usize> CyclotomicRing<MOD_Q, N>
-where
-    [(); N / 2]:,
 {
     pub fn new() -> Self {
         Self { data: [0u64; N] }
@@ -43,8 +39,6 @@ pub fn ntt_multiplication<const MOD_Q: u64, const N: usize>(
     operand1: &mut CyclotomicRing<MOD_Q, N>,
     operand2: &mut CyclotomicRing<MOD_Q, N>,
 ) -> CyclotomicRing<MOD_Q, N>
-where
-    [(); N / 2]:,
 {
     operand1.to_ntt_representation();
     operand2.to_ntt_representation();
@@ -71,8 +65,6 @@ pub fn naive_multiply<const MOD_Q: u64, const N: usize>(
     operand1: &mut CyclotomicRing<MOD_Q, N>,
     operand2: &mut CyclotomicRing<MOD_Q, N>,
 ) -> CyclotomicRing<MOD_Q, N>
-where
-    [(); N / 2]:,
 {
     let mut result = CyclotomicRing::<MOD_Q, N>::new();
     for i in 0..N {
